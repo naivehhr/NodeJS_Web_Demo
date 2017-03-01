@@ -1,5 +1,5 @@
 {
-  "name": "react-hot-boilerplate",
+  "name": "nodejs_web_demo",
   "version": "1.0.0",
   "description": "Boilerplate for ReactJS project with hot code reloading",
   "scripts": {
@@ -7,27 +7,12 @@
     "build": "webpack --display-error-details --progress --colors",
     "lint": "eslint src"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gaearon/react-hot-boilerplate.git"
-  },
   "keywords": [
     "react",
-    "reactjs",
-    "boilerplate",
-    "hot",
-    "reload",
-    "hmr",
-    "live",
-    "edit",
-    "webpack"
+    "reactjs"
   ],
-  "author": "Dan Abramov <dan.abramov@me.com> (http://github.com/gaearon)",
+  "author": "aran.hu",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/gaearon/react-hot-boilerplate/issues"
-  },
-  "homepage": "https://github.com/gaearon/react-hot-boilerplate",
   "devDependencies": {
     "autoprefixer": "^6.7.6",
     "babel-core": "^6.0.20",
@@ -51,7 +36,9 @@
     "webpack-hot-middleware": "^2.10.0"
   },
   "dependencies": {
-    "react": "^0.14.6",
-    "react-dom": "^0.14.6"
+    "react": "^0.14.8",
+    "react-dom": "^0.14.6",
+    "react-redux": "^5.0.3",
+    "redux": "^3.6.0"
   }
 }
