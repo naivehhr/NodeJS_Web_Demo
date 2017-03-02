@@ -1,13 +1,12 @@
 var path = require('path');
 var webpack = require('webpack');
 const htmlWebpackPlugin = require('html-webpack-plugin');
-
 var HOME_DIR = path.resolve(__dirname, 'dist');
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
   entry: [
     'webpack-hot-middleware/client',
-    './src/index.js'
+    './src/app/index.js'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
@@ -19,7 +18,7 @@ module.exports = {
 			filename: 'index.html',
 			template: 'index.html',
 			inject: true
-		}),
+		})
   ],
   module: {
     loaders: [
