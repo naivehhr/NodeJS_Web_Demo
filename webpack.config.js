@@ -24,12 +24,20 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loaders: ['react-hot-loader', 'babel-loader'],
+        loaders: 'babel-loader',
+        exclude: path.resolve(__dirname, 'node_modules'),
         include: path.join(__dirname, 'src')
       },
       {
         test: /\.scss$/,
         loader: 'style-loader!css-loader!postcss-loader!sass-loader'
+      },
+      {
+        test: /\.(jpg|png|gif)$/i,
+        loaders: [
+          'url-loader?limit=20000&name=assets/[name]-[hash].[ext]',
+          'image-webpack-loader'
+        ]
       }
     ]
   }

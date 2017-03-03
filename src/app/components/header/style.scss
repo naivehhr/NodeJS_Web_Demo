@@ -1,5 +1,44 @@
 .header {
   width: 100%;
   height: 300px;
-  background-color: red
+  background-image: url('./img/bg.jpg');
+  background-size: auto 100%;
+
+  .header-main{
+    width: 720px;
+    margin: 0 auto;
+  }
+  .header-main-top {
+    @extend .header-main;
+    height: 80%;
+
+    .header-main-top-text {
+      padding-top: 80px;
+      font-size: 24px;
+    }
+
+    .header-main-top-text-1 {
+      padding-top: 10px;
+    }
+  }
+
+  .header-main-bottom {
+    @extend .header-main;
+    height: 20%;
+    width: 100%;
+    display: inline-block;
+    filter: opacity(1px);
+    box-shadow:0 0 20px rgba(0,150,200,1);
+
+    .header-main-bottom-inner {
+      @extend .header-main;
+      padding-top: 15px;
+      
+
+      .header-main-bottom-inner-btn {
+        display: inline-block;
+      }
+    }
+  }
 }
+
