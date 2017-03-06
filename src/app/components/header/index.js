@@ -2,7 +2,7 @@
  * @Author: aran.hu
  * @Date: 2017-03-02 18:12:17
  * @Last Modified by: aran.hu
- * @Last Modified time: 2017-03-03 18:07:29
+ * @Last Modified time: 2017-03-06 10:33:31
  */
 
 
@@ -19,7 +19,7 @@ export default class Header extends Component {
       <section className='header'>
         <div className='header-main-top'>
           <div className='header-main-top-text'>
-            命运总是颠沛流离
+            我是快乐的小怪兽
           </div>
           <div className='header-main-top-text-1'>
             我是小标题

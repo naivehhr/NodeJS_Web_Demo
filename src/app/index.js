@@ -1,6 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { Router, Route, hashHistory } from 'react-router';
+
 import App from './containers/App';
+
 // import App from './App';
 
 import { Provider } from 'react-redux'
