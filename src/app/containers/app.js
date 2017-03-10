@@ -2,7 +2,7 @@
  * @Author: aran.hu
  * @Date: 2017-03-02 11:05:50
  * @Last Modified by: aran.hu
- * @Last Modified time: 2017-03-06 10:52:33
+ * @Last Modified time: 2017-03-10 13:55:35
  */
 
 import React, { Component } from 'react'
@@ -12,6 +12,7 @@ import Counter from './counter'
 import Header from './header'
 import Main from './Main'
 
+import AnimationTest from './animation'
 import '../common/style/common.scss'
 export default class App extends Component {
   render () {
@@ -19,6 +20,7 @@ export default class App extends Component {
 			<div>
         <Header />
         <Main />
+        <AnimationTest />
 			</div>
 		)
   }
