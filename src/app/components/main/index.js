@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2017-03-06 10:49:21 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2017-03-10 13:54:46
+ * @Last Modified time: 2017-04-13 17:31:15
  */
 
 
@@ -12,7 +12,8 @@ import './style.scss'
 import {
   Button
 } from '../../common'
-
+require('isomorphic-fetch');
+require('es6-promise').polyfill();
 export default class Main extends Component {
 	constructor() {
 		super()
@@ -23,9 +24,29 @@ export default class Main extends Component {
 		setTimeout( () => {
 			this.setState({imageSrc: 'http://img15.3lian.com/2016/h1/143/2.jpg'})
 		}, 2000);
+		setTimeout( () => {
+			console.log('123');
+		}, 2000);
 	}
 	
-
+	onClick = () => {
+		console.log("345345")
+		// document.cookie = 'hjharja'
+		try {
+			fetch("http://localhost:3000", {
+			credentials: 'include',
+			method: "GET",
+			headers: {
+				"content-type": "application/x-www-form-urlencoded",
+			},
+		}).then(function(res) {
+				console.log("123123")
+			}, function(e) {
+		});
+		} catch(e) {
+			console.log(e)
+		}
+	}
   render() {
     return (
       <div className='main'>
@@ -40,7 +61,11 @@ export default class Main extends Component {
 					<li>css动画 http://www.ruanyifeng.com/blog/2014/02/css_transition_and_animation.html</li>
 					<li>react动画</li>
 					<li>react-router</li>
+					
 				</ul>
+				<button onClick={this.onClick} >
+					点我啊
+					</button>
 				<div className='box'>
 					<div className="box box-1">
 						<div className="box box-1 div">box-1</div>
@@ -48,7 +73,9 @@ export default class Main extends Component {
 					<div className="box box-2">
 						<div className="box box-2 div">box-2</div>
 					</div>
+				
 				</div>
+				
       </div>
     )
   }
