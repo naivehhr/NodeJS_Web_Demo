@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2017-03-06 10:49:21 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2017-04-13 17:31:15
+ * @Last Modified time: 2017-04-26 15:26:11
  */
 
 
@@ -12,8 +12,8 @@ import './style.scss'
 import {
   Button
 } from '../../common'
-require('isomorphic-fetch');
-require('es6-promise').polyfill();
+// require('isomorphic-fetch');
+// require('es6-promise').polyfill();
 export default class Main extends Component {
 	constructor() {
 		super()
@@ -21,6 +21,7 @@ export default class Main extends Component {
 	}
 
 	componentDidMount () {
+		document.cookie = 'cookies=110111'
 		setTimeout( () => {
 			this.setState({imageSrc: 'http://img15.3lian.com/2016/h1/143/2.jpg'})
 		}, 2000);
@@ -30,10 +31,8 @@ export default class Main extends Component {
 	}
 	
 	onClick = () => {
-		console.log("345345")
-		// document.cookie = 'hjharja'
 		try {
-			fetch("http://localhost:3000", {
+			fetch("http://localhost:3000/api", {
 			credentials: 'include',
 			method: "GET",
 			headers: {
