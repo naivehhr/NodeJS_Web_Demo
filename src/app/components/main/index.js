@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2017-03-06 10:49:21 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2017-04-26 15:26:11
+ * @Last Modified time: 2018-03-14 17:38:13
  */
 
 
@@ -30,13 +30,14 @@ export default class Main extends Component {
 		}, 2000);
 	}
 	
-	onClick = () => {
+	huharoanonClick = () => {
 		try {
 			fetch("http://localhost:3000/api", {
 			credentials: 'include',
 			method: "GET",
 			headers: {
-				"content-type": "application/x-www-form-urlencoded",
+				"content-type": "application/x-www-form-urlencoded111",
+				"huhaoran": "asdf"
 			},
 		}).then(function(res) {
 				console.log("123123")
@@ -62,7 +63,7 @@ export default class Main extends Component {
 					<li>react-router</li>
 					
 				</ul>
-				<button onClick={this.onClick} >
+				<button onClick={this.huharoanonClick} >
 					点我啊
 					</button>
 				<div className='box'>

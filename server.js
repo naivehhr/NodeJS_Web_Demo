@@ -17,7 +17,7 @@ app.use(cookieParser())
 app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
   
-  console.log("Cookies: ", req.cookies)
+  console.log("Cookies: ", req)
   var body = 'Hello World1';
   res.end(body);
 });
